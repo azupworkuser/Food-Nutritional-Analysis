@@ -1,0 +1,18 @@
+# For getting the list of families
+GET http://localhost:8081/api/fruit/families
+Accept: application/json
+
+###
+# For getting the list of fruits
+GET http://localhost:8081/api/fruits?query=&family=&limit=10&page=1
+Accept: application/json
+
+###
+# For add/remove favorite fruit
+PUT http://localhost:8081/api/fruits/01872325-0a57-7916-96bc-5efe214b3dfc/toggle-favorite
+Accept: application/json
+
+###
+# For getting the favorites fruits
+GET http://localhost:8081/api/fruits/favorites
+Accept: application/json

@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <h1>Hello {{ username|title }}</h1>
+    <p class="important">
+        Congratulation, fruit list data has been imported successfully.
+    </p>
+
+    {% if extraData|length > 0 %}
+    <table border="1" cellpadding="10" style="width: 400px;">
+        <tbody>
+            {% for item, value in extraData %}
+            <tr>
+                <th>{{ item|title }}</th>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+
+    <p class="important">
+        Please <a href="{{ link }}">click here</a> to view the list.
+    </p>
+{% endblock %}
